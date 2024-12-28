@@ -1,8 +1,9 @@
 #!/bin/sh
 
-frameWidth='640'
-frameHeight='480'
+frameWidth=640
+frameHeight=480
 unit='px'
+padding=10
 
 vpype \
 eval "files=glob('frames/*.svg')" \

@@ -16,5 +16,7 @@ grid -o $((frameWidth + padding))${unit} $((frameHeight + padding))${unit} "%col
     line 0 ${frameHeight}${units} 0 0 \
     text -p 5 15 "$(basename '%files[_i]%')" \
 end \
+layout letter \
+scaleto 8in 10.5in \
 write combined.svg
 

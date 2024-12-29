@@ -6,7 +6,7 @@ unit='px'
 padding=10
 
 vpype \
-eval "files=glob('frames/*.svg')" \
+    eval "files=sorted(glob('frames/*.svg'))" \
 eval "cols=6; rows=ceil(len(files)/cols)" \
 grid -o $((frameWidth + padding))${unit} $((frameHeight + padding))${unit} "%cols%" "%rows%" \
     read --no-fail "%files[_i] if _i < len(files) else ''%" \

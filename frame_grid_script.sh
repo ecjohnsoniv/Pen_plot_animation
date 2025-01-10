@@ -3,7 +3,7 @@
 frameWidth=640
 frameHeight=480
 unit='px'
-padding=10
+padding=0
 
 vpype \
     eval "files=sorted(glob('frames/*.svg'))" \
@@ -17,6 +17,5 @@ grid -o $((frameWidth + padding))${unit} $((frameHeight + padding))${unit} "%col
     text -p 5 15 "$(basename '%files[_i]%')" \
 end \
 layout letter \
-scaleto 8in 10.5in \
+scaleto -f 7in 10.5in \
 write combined.svg
-
